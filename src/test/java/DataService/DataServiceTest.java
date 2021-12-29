@@ -46,7 +46,7 @@ public class DataServiceTest {
     }
     @Test(expected = Exception.class)//тестируем выброс эксепшена
     public void testFindMaxException() throws Exception {
-        //создаём пустые и нулл данные в списке
+        //создаём пустой список и нулл во входящих данных
         List<Integer> numbers = Arrays.asList();
         List<Integer> numbers2 = null;
         DataService.findMax(numbers);
@@ -54,7 +54,7 @@ public class DataServiceTest {
         //тест - фейл "List of numbers is empty", если не запишем в аннотации вверу какой эксепшн мы ожидаем!!
         //(expected = Exception.class) вписываем и ожидаем появление эксепшена, в итоге тест - passed
     }
-    @Test //тестируем нахождение максимального элемента через стрим
+    @Test //тестируем метода нахождение максимального элемента через стрим
     public void testFindMaxByStreams() throws Exception {
         //создаём разные вариации данных в списках
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
@@ -67,7 +67,7 @@ public class DataServiceTest {
     }
     @Test(expected = Exception.class)//тестируем выброс эксепшена  через стрим, ожидаем его и тест будет passed
     public void testFindMaxExceptionByStreams() throws Exception {
-        //создаём пустые и нулл данные в списке
+        //отправляем методу  пустые и нулл данные
         List<Integer> numbers = Arrays.asList();
         DataService.findMaxByStreams(numbers);
         DataService.findMaxByStreams(null);

@@ -4,11 +4,11 @@ import java.util.Comparator;
 import java.util.List;
 
 public class DataService {
-    //это первый статик метод мы хотим тестировать.
+    //это первый статик метод поиска максимадьного элемента.
     //На вход ему даем список элементов. На выходе - максимальный элемент из списка 'numbers'
     public static int findMax(List<Integer> numbers) throws Exception {
         if (numbers == null || numbers.isEmpty()) {
-            //проверяем на такие вот условия и выбрасываем исключение
+            //проверяем входящий список на такие вот условия и выбрасываем исключение
             throw  new Exception("List of numbers is empty");
             //выкидывание эксепшена тоже будем тестировать
         }
@@ -20,11 +20,11 @@ public class DataService {
                 max=current;
             }
         }
-        //возврат макс элемента
+        //возврат методом макс элемента
         return max;
     }
 
-    //это второй более короткий метод поиска максимадьного элемента, но уже из стрима элементов
+    //это второй более короткий метод поиска максимального элемента, но уже из стрима элементов
     public static int findMaxByStreams (List<Integer> numbers) throws Exception {
         //Comparator.naturalOrder() - порядок ищет макс
         //Comparator.reverseOrder() - порядок ищет мин
