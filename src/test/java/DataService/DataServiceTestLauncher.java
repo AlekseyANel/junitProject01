@@ -25,7 +25,7 @@ public class DataServiceTestLauncher {
         var summaryGeneratingListener = new SummaryGeneratingListener();
 
         launcher.execute(request, summaryGeneratingListener);//запуск созданного/билдованного реквеста с лисереном
-        //execute возвращает на void, поэтому нужна статистика по итогу выполнения тестов в консоль
+        //execute возвращает нам void, поэтому нужна статистика по итогу выполнения тестов в консоль
         summaryGeneratingListener.getSummary().printTo(new PrintWriter(System.out));
     }
 }

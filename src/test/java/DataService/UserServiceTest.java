@@ -20,7 +20,7 @@ class UserServiceTest {
         System.out.println("After All: closeConnectionPool"/*without + this, because Static*/);
     }
     @BeforeEach
-    void prepare() {
+    void prepareDataForBb() {
         System.out.println("Before Each: "+ this);
         //Перед каждым тестом создаем новый экземпляр userService класса UserService,
         //чтобы обеспечить тестам независимость
