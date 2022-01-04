@@ -2,7 +2,7 @@ package DataService;
 
 import java.util.Comparator;
 import java.util.List;
-
+//Класс обрабатывает коллекцию чисел
 public class DataService {
     //это первый статик метод поиска максимадьного элемента.
     //На вход ему даем список элементов. На выходе - максимальный элемент из списка 'numbers'

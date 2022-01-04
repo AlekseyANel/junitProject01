@@ -4,8 +4,8 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
-//Другой вариант запуска сьют-тестов - через данный раннер
-//Create java-class to execute test cases, в т.ч. в виде набора-suite 2х тестов
+//Другой вариант запуска сьют-тестов в Thing Package - через данный раннер
+//Create java-class to execute test cases, в т.ч. в виде набора-suite 2х и более тестов
 public class ThingTestRunner {
     public static void main (String[] args) {
         //Специальный движок JUnitCore генерирует result запуска тестов

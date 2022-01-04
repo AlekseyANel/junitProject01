@@ -20,11 +20,11 @@ public class DataServiceTest {
     public static void afterClass() throws Exception {
         System.out.println("Executes it after this class;)");
     }
-    @Before//аннотация junit
+    @Before//аннотация junit перед каждым тестовым методом
     public void setUp() throws Exception {
         System.out.println("Executes it before every test;)");
     }
-    @After//аннотация junit
+    @After//аннотация junit перед каждым тестовым методом
     public void tearDown() throws Exception {
         System.out.println("Executes it after every test;)");
     }
@@ -38,7 +38,7 @@ public class DataServiceTest {
         int max = DataService.findMax(numbers);
         int max2 = DataService.findMax(numbers2);
         assertEquals(max,6);//Равно ли этому макс числу, которое мы знаем
-        assertEquals(max2,40);
+        assertEquals(max2,40);//Равно ли этому макс числу, которое мы знаем
         //c помощью библиоеки AssertJ можно делать цепочки сравнений
         assertThat(max2).isNotNull()
                 .isGreaterThan(10).isLessThan(100)
@@ -54,7 +54,7 @@ public class DataServiceTest {
         //тест - фейл "List of numbers is empty", если не запишем в аннотации вверу какой эксепшн мы ожидаем!!
         //(expected = Exception.class) вписываем и ожидаем появление эксепшена, в итоге тест - passed
     }
-    @Test //тестируем метода нахождение максимального элемента через стрим
+    @Test //тестируем метод нахождение максимального элемента через стрим
     public void testFindMaxByStreams() throws Exception {
         //создаём разные вариации данных в списках
         List<Integer> numbers = Arrays.asList(1,2,3,4,5,6);
